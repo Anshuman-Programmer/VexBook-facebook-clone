@@ -26,7 +26,7 @@ function InputBox() {
 
     if(!inputRef.current.value) return
 
-    db.collection('post').add({
+    db.collection('posts').add({
       message: inputRef.current.value,
       name: 'anshuman',
       email: 'test@gmail.com',
