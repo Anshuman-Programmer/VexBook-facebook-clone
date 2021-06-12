@@ -13,7 +13,7 @@ import SideBarRow from './SideBarRow'
 
 function SideBar() {
   return (
-    <div className="p-2 md:ml-5 max-w-[600px] xl:min-w-[300px]">
+    <div className="p-2 hidden md:inline-flex flex-col md:ml-5 max-w-[600px] xl:min-w-[300px]">
       <SideBarRow Icon={UserIcon} title="Friends"/>
       <SideBarRow Icon={UserGroupIcon} title="Group"/>
       <SideBarRow Icon={ShoppingBagIcon} title="Marketplace"/>

@@ -17,7 +17,7 @@ function Posts() {
           name={post.data().name}
           message={post.data().message}
           email={post.data().email}
-          timestamps={post.data().timestamps}
+          timestamp={post.data().timestamp}
           image={post.data().image}
           postImage={post.data().postImage}
         />

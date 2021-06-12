@@ -33,7 +33,7 @@ function Header() {
         <div className="flex item-center rounded-full bg-gray-100 p-2 ml-2">
           <SearchIcon className="h-6 text-gray-600"/>
 
-          <input className="hidden md:inline-flex flex-shrink flex ml-2 items-center outline-none bg-transparent placeholber-gray-500" type="text" placeholder="Search Vexbook"/>
+          <input className="hidden md:inline-flex flex-shrink ml-2 items-center outline-none bg-transparent placeholber-gray-500" type="text" placeholder="Search Vexbook"/>
         </div>
       </div>
 
@@ -47,9 +47,7 @@ function Header() {
         </div>
       </div>
 
-      <div className="flex items-center hidden md:flex justify-end">
-
-        <p className="font-semibold whitespace-nowrap">Anshuman Talukdar</p>
+      <div className="items-center hidden md:flex justify-end">
         <ViewGridIcon className="icon"/>
         <ChatIcon className="icon"/>
         <BellIcon className="icon"/>

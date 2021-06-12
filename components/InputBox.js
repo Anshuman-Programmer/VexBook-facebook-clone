@@ -28,9 +28,10 @@ function InputBox() {
 
     db.collection('posts').add({
       message: inputRef.current.value,
-      name: 'anshuman',
+      name: 'Guest user name',
       email: 'test@gmail.com',
-      timestamp: firebase.firestore.FieldValue.serverTimestamp() 
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      image: "https://lh3.googleusercontent.com/ogw/ADea4I6HjQoKq70zXbA6NVj0m0yu6fG4np8iBwz5xGHQxw=s32-c-mo"
     }).then(doc => {
       if(imageToPost){
         const upLoadTask = storage.ref(`posts/${doc.id}`).putString(imageToPost, 'data_url')
@@ -96,7 +97,7 @@ function InputBox() {
 
     <div className="flex justify-evenly p-3 border-1">
 
-      <div className="inputIcon">
+      <div className="inputIcon hidden md:flex">
         <VideoCameraIcon className="h-7 text-red-500"/>
         <p className="text-xs sm:text-sm xl:text-base cursor-pointer">Live Video</p>
       </div>
@@ -107,7 +108,7 @@ function InputBox() {
         <input ref={filePickerRef} onChange={addImagePost} hidden type="file"/>
       </div>
 
-      <div className="inputIcon">
+      <div className="inputIcon hidden md:flex">
         <EmojiHappyIcon className="h-7 text-yellow-300"/>
         <p className="text-xs sm:text-sm xl:text-base cursor-pointer">Feeling/Activity</p>
       </div>
